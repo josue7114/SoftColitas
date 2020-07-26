@@ -1,5 +1,4 @@
 ﻿using DataAccess;
-using DataAccess;
 using DataModel;
 using System;
 using System.Collections.Generic;
@@ -18,5 +17,9 @@ namespace DataLogic
             return _daex.AgregarExpediente(_ex);
         }
 
+        public Expediente ObtenerExpediente(string cod_animal)
+        {
+            return _daex.ObtenerExpediente(cod_animal);
+        }
     }
 }

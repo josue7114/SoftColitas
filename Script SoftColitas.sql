@@ -313,6 +313,11 @@ BEGIN
 END
 GO
 
+CREATE PROCEDURE SP_BUSCAR_EXPEDIENTE(@COD_ANIMAL VARCHAR(15)) AS
+BEGIN
+	SELECT IDExpediente, Peso, FechaAtencion, ProcedimientosRealizados, Resumen, Vacuna FROM tbExpedienteAnimal WHERE CodigoAnimal = @COD_ANIMAL
+END
+GO
 
 ---------------------------------------------------procedimientos almacenados-----------------------------------------------------------
 

@@ -27,5 +27,27 @@ namespace DataAccess
             _conn.Close();
             return Resultado;
         }
+
+        public Expediente ObtenerExpediente(string cod_animal)
+        {
+            Expediente _expediente = new Expediente();
+            IDbConnection _conn = DASoftColitas.Conexion();
+            _conn.Open();
+            SqlCommand _Comand = new SqlCommand("SP_BUSCAR_EXPEDIENTE", _conn as SqlConnection);
+            _Comand.CommandType = CommandType.StoredProcedure;
+            _Comand.Parameters.Add(new SqlParameter("@COD_ANIMAL", cod_animal));
+            IDataReader _reader = _Comand.ExecuteReader();
+            while (_reader.Read())
+            {
+                _expediente.IDExpediente= _reader.GetInt32(0);
+                _expediente.Peso = _reader.GetString(1);
+                _expediente.FechaAtencion = _reader.GetDateTime(2);
+                _expediente.ProcedimientosRealizados = _reader.GetString(3);
+                _expediente.Resumen = _reader.GetString(4);
+                _expediente.Vacuna = _reader.GetString(5);
+            }
+            _conn.Close();
+            return _expediente;
+        }
     }
 }

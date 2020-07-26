@@ -85,3 +85,14 @@ C:\Users\josue\Desktop\SoftColitas app\Nueva version SoftColitas\SoftColitas\Dat
 C:\Users\josue\Desktop\SoftColitas app\Nueva version SoftColitas\SoftColitas\DataModel\obj\Debug\DataModel.csproj.CopyComplete
 C:\Users\josue\Desktop\SoftColitas app\Nueva version SoftColitas\SoftColitas\DataModel\obj\Debug\DataModel.dll
 C:\Users\josue\Desktop\SoftColitas app\Nueva version SoftColitas\SoftColitas\DataModel\obj\Debug\DataModel.pdb
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\bin\Debug\DataModel.dll.config
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\bin\Debug\DataModel.dll
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\bin\Debug\DataModel.pdb
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\bin\Debug\EntityFramework.dll
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\bin\Debug\EntityFramework.xml
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\obj\Debug\DataModel.csproj.CoreCompileInputs.cache
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\obj\Debug\DataModel.csproj.CopyComplete
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\obj\Debug\DataModel.dll
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\obj\Debug\DataModel.pdb

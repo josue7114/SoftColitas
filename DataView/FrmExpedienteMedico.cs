@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Transactions;
 using System.Windows.Forms;
 
@@ -72,20 +73,32 @@ namespace DataView
                     {
                         if (animal.CodigoAnimal.Equals(cboxAnimales.SelectedItem))
                         {
-                            txtPeso.Text = animal.PesoAprox;
                             byte[] img = animal.Imagen;
                             MemoryStream ms = new MemoryStream(img);
                             Image imagen = Image.FromStream(ms);
                             pBoxFoto.Image = imagen;
                             if (animal.Estado == "Albergue")
                             {
+                                expediente = GetExpediente(animal.CodigoAnimal);
+                                if (expediente != null)
+                                {
+                                    txtPeso.Text = expediente.Peso;
+                                    txtFecha.Text = expediente.FechaAtencion.ToString();
+                                    txtProcedimientos.Text = expediente.ProcedimientosRealizados;
+                                    txtResumen.Text = expediente.Resumen;
+                                }
+                                else {
+                                    txtPeso.Text = animal.PesoAprox;
+                                }
                                 btnRegistrar.Enabled = true;
+                                btnModificar.Enabled = true;
                                 MessageBox.Show("El animal se encuentra disponible para agregar información", "Información", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                                 break;
                             }
                             else
                             {
                                 btnRegistrar.Enabled = false;
+                                btnModificar.Enabled = false;
                                 MessageBox.Show("El animal NO se encuentra disponible para agregar información", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
@@ -109,7 +122,7 @@ namespace DataView
                         expediente.Peso = txtPeso.Text;
                         expediente.FechaAtencion = DateTime.Today;
                         expediente.ProcedimientosRealizados = txtProcedimientos.Text;
-                        expediente.Resumen = txtResumen.Text;
+                        expediente.Resumen = DateTime.Today.ToString() + ": " + txtProcedimientos.Text;
                         expediente.CodigoAnimal = cboxAnimales.SelectedItem.ToString();
                         if (rbNo.Checked)
                         {
@@ -134,9 +147,18 @@ namespace DataView
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Animal animal = _dla.BuscarAnimal(cboxAnimales.SelectedItem.ToString());
+        }
+
+        private Expediente GetExpediente(String cod_animal) {
+            Expediente ex = _dlex.ObtenerExpediente(cod_animal);
+            return ex;
         }
     }
 }
