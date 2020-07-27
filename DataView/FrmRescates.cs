@@ -28,6 +28,7 @@ namespace DataView
             InitializeComponent();
             CargarComboAnimales();
             llenarComboEspecie();
+            LlenarFecha();
         }
 
 
@@ -197,9 +198,9 @@ namespace DataView
             this.txtAlertaAnimal.Text = "";
             this.txtLugar.Text = "";
             this.cBoxTipoAnimal.Text = "";
-            cboxAnimales.Refresh();
+            this.cboxAnimales.Refresh();
             this.txtDescripcion.Text = "";
-            this.cboBoxEstado.SelectedIndex = 0 ;
+            this.cboBoxEstado.Refresh();
         }
 
         private void CboBoxEstado_SelectedIndexChanged(object sender, EventArgs e)
@@ -276,28 +277,34 @@ namespace DataView
             try
             {
                 Rescate _resc = _dlr.ConsultarRescate(cboxAnimales.SelectedItem.ToString());
-                if (_resc.IDRescate != 0)
+                if (cboxAnimales.SelectedIndex != -1)
                 {
-                    this.txtAlertaAnimal.Text = _resc.NombreQuienReporta;
-                    this.cboxAnimales.SelectedItem = _resc.CodigoAnimal;
-                    this.txtDescripcion.Text = _resc.Descripcion;
-                    this.cBoxTipoAnimal.SelectedItem = _resc.EspecieAnimal;
-                    this.txtFecha.Text = _resc.FechaRescate.ToString();
-                    this.txtLugar.Text = _resc.LugarRescate;
-                    this.enableData(false);
-                    this.cargarCombo();
-                    this.btnRegistrar.Enabled = false;
-                }
-                else
-                {
-                    MessageBox.Show("No existe expediente de rescate para el animal indicado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    this.btnRegistrar.Enabled = true;
-                    this.Limpiar();
+                    if (_resc.CodigoAnimal == cboxAnimales.SelectedItem.ToString())
+                    {
+                        this.txtAlertaAnimal.Text = _resc.NombreQuienReporta;
+                        this.cboxAnimales.SelectedItem = _resc.CodigoAnimal;
+                        this.txtDescripcion.Text = _resc.Descripcion;
+                        this.cBoxTipoAnimal.SelectedItem = _resc.EspecieAnimal;
+                        this.txtFecha.Text = _resc.FechaRescate.ToString();
+                        this.txtLugar.Text = _resc.LugarRescate;
+                        this.enableData(false);
+                        this.cargarCombo();
+                        this.btnRegistrar.Enabled = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("No existe expediente de rescate para el animal indicado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        LlenarFecha();
+                        this.enableData(true);
+                        this.btnRegistrar.Enabled = true;
+                        Limpiar();
+                    }
                 }
             }
             catch
             {
                 MessageBox.Show("Error al cargar datos ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                LlenarFecha();
             }
         }
 
@@ -311,5 +318,12 @@ namespace DataView
                 this.cboxAnimales.Items.Add(animal.CodigoAnimal);
             }
         }
+
+        public void LlenarFecha()
+        {
+            string fecha = DateTime.Now.ToString("dd/MM/yyyy");
+            txtFecha.Text = fecha;
+        }
     }
+
 }
