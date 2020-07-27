@@ -45,15 +45,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.pBoxFoto = new System.Windows.Forms.PictureBox();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtCodigoAnimal = new System.Windows.Forms.TextBox();
             this.txtFecha = new System.Windows.Forms.TextBox();
+            this.cboxAnimales = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
@@ -217,17 +216,6 @@
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Image = global::DataView.Properties.Resources.buscar_20;
-            this.btnBuscar.Location = new System.Drawing.Point(463, 184);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(40, 35);
-            this.btnBuscar.TabIndex = 28;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // pBoxFoto
             // 
             this.pBoxFoto.Location = new System.Drawing.Point(608, 314);
@@ -266,7 +254,6 @@
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsultar.UseVisualStyleBackColor = true;
-            this.btnConsultar.Click += new System.EventHandler(this.BtnConsultar_Click);
             // 
             // btnModificar
             // 
@@ -303,15 +290,6 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
-            // txtCodigoAnimal
-            // 
-            this.txtCodigoAnimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoAnimal.Location = new System.Drawing.Point(265, 190);
-            this.txtCodigoAnimal.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCodigoAnimal.Name = "txtCodigoAnimal";
-            this.txtCodigoAnimal.Size = new System.Drawing.Size(179, 27);
-            this.txtCodigoAnimal.TabIndex = 30;
-            // 
             // txtFecha
             // 
             this.txtFecha.Enabled = false;
@@ -322,16 +300,24 @@
             this.txtFecha.Size = new System.Drawing.Size(179, 27);
             this.txtFecha.TabIndex = 31;
             // 
+            // cboxAnimales
+            // 
+            this.cboxAnimales.FormattingEnabled = true;
+            this.cboxAnimales.Location = new System.Drawing.Point(265, 190);
+            this.cboxAnimales.Name = "cboxAnimales";
+            this.cboxAnimales.Size = new System.Drawing.Size(179, 24);
+            this.cboxAnimales.TabIndex = 32;
+            this.cboxAnimales.SelectedIndexChanged += new System.EventHandler(this.cBoxAnimales_SelectedIndexChanged);
+            // 
             // FrmRescates
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(146)))), ((int)(((byte)(208)))));
             this.ClientSize = new System.Drawing.Size(778, 667);
+            this.Controls.Add(this.cboxAnimales);
             this.Controls.Add(this.txtFecha);
-            this.Controls.Add(this.txtCodigoAnimal);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pBoxFoto);
             this.Controls.Add(this.label4);
@@ -385,10 +371,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pBoxFoto;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.TextBox txtFecha;
-        private System.Windows.Forms.TextBox txtCodigoAnimal;
+        private System.Windows.Forms.ComboBox cboxAnimales;
     }
 }

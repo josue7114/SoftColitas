@@ -16,6 +16,7 @@ namespace DataView
         DLAnimal _dla = new DLAnimal();
         DLExpediente _dlex = new DLExpediente();
         Expediente expediente = new Expediente();
+        string resumen = "";
         public FrmExpedienteMedico()
         {
             InitializeComponent();
@@ -48,8 +49,7 @@ namespace DataView
         }
         public void LlenarFecha()
         {
-            string dateString = DateTime.Now.ToString("dd/MM/yyyy");
-            txtFecha.Text = dateString;
+            txtFecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
 
         public void LlenarBox() {
@@ -84,21 +84,24 @@ namespace DataView
                                 {
                                     txtPeso.Text = expediente.Peso;
                                     txtFecha.Text = expediente.FechaAtencion.ToString();
-                                    txtProcedimientos.Text = expediente.ProcedimientosRealizados;
                                     txtResumen.Text = expediente.Resumen;
+                                    resumen = expediente.Resumen;
+                                    if (expediente.Vacuna == "No")
+                                    {
+                                        rbNo.Checked = true;
+                                    }
+                                    else {
+                                        rbSi.Checked = true;
+                                    }
                                 }
-                                else {
-                                    txtPeso.Text = animal.PesoAprox;
-                                }
+                                txtPeso.Text = animal.PesoAprox;
                                 btnRegistrar.Enabled = true;
-                                btnModificar.Enabled = true;
                                 MessageBox.Show("El animal se encuentra disponible para agregar información", "Información", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                                 break;
                             }
                             else
                             {
                                 btnRegistrar.Enabled = false;
-                                btnModificar.Enabled = false;
                                 MessageBox.Show("El animal NO se encuentra disponible para agregar información", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
@@ -120,9 +123,9 @@ namespace DataView
                     if (animal.Estado == "Albergue")
                     {
                         expediente.Peso = txtPeso.Text;
-                        expediente.FechaAtencion = DateTime.Today;
+                        expediente.FechaAtencion = DateTime.Now;
                         expediente.ProcedimientosRealizados = txtProcedimientos.Text;
-                        expediente.Resumen = DateTime.Today.ToString() + ": " + txtProcedimientos.Text;
+                        expediente.Resumen = string.Format("{0}{1}:{2} \r\n", resumen , DateTime.Now.ToString(), txtProcedimientos.Text, Environment.NewLine);
                         expediente.CodigoAnimal = cboxAnimales.SelectedItem.ToString();
                         if (rbNo.Checked)
                         {

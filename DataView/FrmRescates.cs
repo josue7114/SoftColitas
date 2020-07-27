@@ -26,8 +26,8 @@ namespace DataView
         public FrmRescates()
         {
             InitializeComponent();
+            CargarComboAnimales();
             llenarComboEspecie();
-            LlenarFecha();
         }
 
 
@@ -61,7 +61,6 @@ namespace DataView
                     if (VerificarCampos())
                     {
                         _rescate.LugarRescate = txtLugar.Text;
-                        _rescate.CodigoAnimal = txtCodigoAnimal.Text;
                         _rescate.FechaRescate = Convert.ToDateTime(txtFecha.Text);
                         _rescate.EspecieAnimal = cBoxTipoAnimal.SelectedItem.ToString();
                         _rescate.NombreQuienReporta = txtAlertaAnimal.Text;
@@ -79,7 +78,6 @@ namespace DataView
                     }
                     Limpiar();
                     errorProvider.Clear();
-                    LlenarFecha();
                     btnRegistrar.Enabled = false;
                     this.cboBoxEstado.Items.Clear();
                 }
@@ -136,7 +134,7 @@ namespace DataView
                 
                 if (this.arrayImag.Count == 0)
                 {
-                    List<Foto> _fotos = _dlr.ObtenerFotos(txtCodigoAnimal.Text);
+                    List<Foto> _fotos = _dlr.ObtenerFotos(cboxAnimales.SelectedItem.ToString());
                     foreach (Foto foto in _fotos)
                     {
                         this.cboBoxEstado.Items.Add(foto.NombreImg);
@@ -154,7 +152,6 @@ namespace DataView
             catch
             {
                 MessageBox.Show("Error al cargar datos de imágenes","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                LlenarFecha();
             }
         }
 
@@ -188,35 +185,6 @@ namespace DataView
             }
         }
 
-        private void BtnConsultar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Rescate _resc = _dlr.ConsultarRescate(txtCodigoAnimal.Text);
-                if (_resc.IDRescate != 0)
-                {
-                    this.txtAlertaAnimal.Text = _resc.NombreQuienReporta;
-                    this.txtCodigoAnimal.Text = _resc.CodigoAnimal;
-                    this.txtDescripcion.Text = _resc.Descripcion;
-                    this.cBoxTipoAnimal.SelectedItem = _resc.EspecieAnimal;
-                    this.txtFecha.Text = _resc.FechaRescate.ToString();
-                    this.txtLugar.Text = _resc.LugarRescate;
-                    this.enableData(false);
-                    this.cargarCombo();
-                }
-                else
-                {
-                    MessageBox.Show("No existe expediente de rescate para el animal indicado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    LlenarFecha();
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Error al cargar datos ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                LlenarFecha();
-            }  
-        }
-
         private void enableData(Boolean status)
         {
             this.txtAlertaAnimal.Enabled = status;
@@ -229,7 +197,7 @@ namespace DataView
             this.txtAlertaAnimal.Text = "";
             this.txtLugar.Text = "";
             this.cBoxTipoAnimal.Text = "";
-            this.txtCodigoAnimal.Text = "";
+            cboxAnimales.Refresh();
             this.txtDescripcion.Text = "";
             this.cboBoxEstado.SelectedIndex = 0 ;
         }
@@ -265,11 +233,6 @@ namespace DataView
                 ok = false;
                 errorProvider.SetError(txtLugar,"Debe ingresar un lugar");
             }
-            if (this.txtCodigoAnimal.Text.Trim() == "")
-            {
-                ok = false;
-                errorProvider.SetError(txtCodigoAnimal, "Debe ingresar un código de animal");
-            }
             if (this.cBoxTipoAnimal.SelectedIndex == 0)
             {
                 ok = false;
@@ -288,24 +251,11 @@ namespace DataView
             return ok;
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            if (BuscarAnimal())
-            {
-                Animal _animal = _dla.BuscarAnimal(txtCodigoAnimal.Text);
-                cBoxTipoAnimal.SelectedItem = _animal.Especie;
-                btnRegistrar.Enabled = true;
-                MessageBox.Show("El animal se encuentra registrado", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            }
-            else
-            {
-                MessageBox.Show("El animal no se encuentra registrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        
 
         public bool BuscarAnimal()
         {
-            Animal _animal = _dla.BuscarAnimal(txtCodigoAnimal.Text);
+            Animal _animal = _dla.BuscarAnimal(cboxAnimales.SelectedItem.ToString());
             if (_animal != null)
             {
                 string estado = _animal.Estado;
@@ -320,12 +270,46 @@ namespace DataView
             }
             return false;
         }
-        public void LlenarFecha()
+
+        private void cBoxAnimales_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string fecha = DateTime.Now.ToString("dd/MM/yyyy");
-            string anno = DateTime.Now.ToString("yyyy");
-            txtCodigoAnimal.Text = anno + "-";
-            txtFecha.Text = fecha;
+            try
+            {
+                Rescate _resc = _dlr.ConsultarRescate(cboxAnimales.SelectedItem.ToString());
+                if (_resc.IDRescate != 0)
+                {
+                    this.txtAlertaAnimal.Text = _resc.NombreQuienReporta;
+                    this.cboxAnimales.SelectedItem = _resc.CodigoAnimal;
+                    this.txtDescripcion.Text = _resc.Descripcion;
+                    this.cBoxTipoAnimal.SelectedItem = _resc.EspecieAnimal;
+                    this.txtFecha.Text = _resc.FechaRescate.ToString();
+                    this.txtLugar.Text = _resc.LugarRescate;
+                    this.enableData(false);
+                    this.cargarCombo();
+                    this.btnRegistrar.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("No existe expediente de rescate para el animal indicado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.btnRegistrar.Enabled = true;
+                    this.Limpiar();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error al cargar datos ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void CargarComboAnimales()
+        {
+            List<Animal> _animal = _dla.CargarAnimales();
+            cboxAnimales.Items.Insert(0, "Seleccionar");
+            cboxAnimales.SelectedIndex = 0;
+            foreach (Animal animal in _animal)
+            {
+                this.cboxAnimales.Items.Add(animal.CodigoAnimal);
+            }
         }
     }
 }

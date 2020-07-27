@@ -41,7 +41,6 @@
             this.txtProcedimientos = new System.Windows.Forms.TextBox();
             this.txtResumen = new System.Windows.Forms.TextBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.rbSi = new System.Windows.Forms.RadioButton();
             this.rbNo = new System.Windows.Forms.RadioButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -160,6 +159,8 @@
             this.txtResumen.Location = new System.Drawing.Point(226, 408);
             this.txtResumen.Multiline = true;
             this.txtResumen.Name = "txtResumen";
+            this.txtResumen.ReadOnly = true;
+            this.txtResumen.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtResumen.Size = new System.Drawing.Size(538, 91);
             this.txtResumen.TabIndex = 11;
             // 
@@ -177,20 +178,6 @@
             this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
-            this.btnModificar.Image = global::DataView.Properties.Resources.Modificar_32;
-            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(350, 542);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(132, 45);
-            this.btnModificar.TabIndex = 13;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // rbSi
             // 
@@ -270,7 +257,6 @@
             this.Controls.Add(this.rbNo);
             this.Controls.Add(this.rbSi);
             this.Controls.Add(this.btnRegresar);
-            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.txtResumen);
             this.Controls.Add(this.txtProcedimientos);
@@ -308,7 +294,6 @@
         private System.Windows.Forms.TextBox txtProcedimientos;
         private System.Windows.Forms.TextBox txtResumen;
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.RadioButton rbSi;
         private System.Windows.Forms.RadioButton rbNo;

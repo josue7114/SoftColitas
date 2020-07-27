@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>YISJo6cOgbiTKTEbG0XzpRPS9EcRuU6Q9U30x5jvFDY=</dsig:DigestValue>
+        <dsig:DigestValue>kcSu3MHBRLeuPn6SrKaRhRNbGarPUu+nFE2p92MORnc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -90,14 +90,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataView.exe" size="2313184">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataView.exe" size="2312672">
       <assemblyIdentity name="DataView" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Ubko1FO7iwAMTRtXu8Dvz+PLzSRPbQ7WHhVuKxO7uo4=</dsig:DigestValue>
+        <dsig:DigestValue>pXqjNSDaBRuH8TAmP35G8njB0W0zmIHUn6f2pTii5Sk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -133,7 +133,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OTSGZioOup6gCGqwzFdJgewLTBOS2aFi/pidCb1oJC0=</dsig:DigestValue>
+        <dsig:DigestValue>SkuW7FtLiw8+KQ2qxZ+umjc5rl4J+2qa9Nl74frKR9E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
