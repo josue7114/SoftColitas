@@ -197,7 +197,7 @@ namespace DataView
         {
             this.txtAlertaAnimal.Text = "";
             this.txtLugar.Text = "";
-            this.cBoxTipoAnimal.Text = "";
+            this.cBoxTipoAnimal.Refresh();
             this.cboxAnimales.Refresh();
             this.txtDescripcion.Text = "";
             this.cboBoxEstado.Refresh();
@@ -277,7 +277,8 @@ namespace DataView
             try
             {
                 Rescate _resc = _dlr.ConsultarRescate(cboxAnimales.SelectedItem.ToString());
-                if (cboxAnimales.SelectedIndex != -1)
+                Animal _an = _dla.BuscarAnimal(cboxAnimales.SelectedItem.ToString());
+                if (cboxAnimales.SelectedIndex != 0)
                 {
                     if (_resc.CodigoAnimal == cboxAnimales.SelectedItem.ToString())
                     {
@@ -295,6 +296,7 @@ namespace DataView
                     {
                         MessageBox.Show("No existe expediente de rescate para el animal indicado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         LlenarFecha();
+                        this.cBoxTipoAnimal.SelectedItem = _an.Especie;
                         this.enableData(true);
                         this.btnRegistrar.Enabled = true;
                         Limpiar();
