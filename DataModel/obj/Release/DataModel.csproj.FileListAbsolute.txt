@@ -1,0 +1,11 @@
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\bin\Release\DataModel.dll.config
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\bin\Release\DataModel.dll
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\bin\Release\DataModel.pdb
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\bin\Release\EntityFramework.dll
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\bin\Release\EntityFramework.xml
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\obj\Release\DataModel.csproj.CoreCompileInputs.cache
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\obj\Release\DataModel.csproj.CopyComplete
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\obj\Release\DataModel.dll
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\obj\Release\DataModel.pdb

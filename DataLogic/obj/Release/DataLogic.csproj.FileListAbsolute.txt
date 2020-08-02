@@ -1,0 +1,13 @@
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataLogic\bin\Release\DataLogic.dll
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataLogic\bin\Release\DataLogic.pdb
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataLogic\bin\Release\DataAccess.dll
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataLogic\bin\Release\DataModel.dll
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataLogic\bin\Release\DataAccess.pdb
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataLogic\bin\Release\DataAccess.dll.config
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataLogic\bin\Release\DataModel.pdb
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataLogic\bin\Release\DataModel.dll.config
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataLogic\obj\Release\DataLogic.csprojAssemblyReference.cache
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataLogic\obj\Release\DataLogic.csproj.CoreCompileInputs.cache
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataLogic\obj\Release\DataLogic.csproj.CopyComplete
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataLogic\obj\Release\DataLogic.dll
+C:\Users\josue\Desktop\Proyectos\SoftColitas\DataLogic\obj\Release\DataLogic.pdb

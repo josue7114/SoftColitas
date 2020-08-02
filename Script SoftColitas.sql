@@ -73,7 +73,6 @@ create table [tbDonacion](
 IDDonacion int primary key not null identity (1,1),
 Monto decimal(8,2) not null,
 Fecha date not null,
-Tipo varchar(15) not null,
 CodigoAnimal varchar(15) null,
 IDUsuario int not null)
 go
