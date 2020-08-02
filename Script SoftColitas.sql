@@ -100,6 +100,7 @@ go
 alter table [tbDonacion] add foreign key (CodigoAnimal) references [tbAnimal] (CodigoAnimal)
 go
 
+INSERT INTO [tbUsuario] VALUES ('Admin','Admin','Admin','Admin','Admin')
 ---------------------------------------------------procedimientos almacenados CRUD-----------------------------------------------------------
 ---------------------------------------------------USUARIOS-----------------------------------------------------------
 
