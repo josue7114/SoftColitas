@@ -123,6 +123,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(331, 39);
             this.txtNombre.TabIndex = 11;
+            
             // 
             // txtCedula
             // 
@@ -143,6 +144,7 @@
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(331, 39);
             this.txtNombreUsuario.TabIndex = 13;
+         
             // 
             // txtContra
             // 

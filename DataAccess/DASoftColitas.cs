@@ -10,7 +10,7 @@ namespace DataAccess
 {
     public static class DASoftColitas
     {
-        private static string Conn = @"Data Source=DESKTOP-2QUMSDI\SQLEXPRESS;Initial Catalog=SoftColitas;Integrated Security=True";
+        private static string Conn = @"Data Source=(local);Initial Catalog=SoftColitas;Integrated Security=True";
 
         public static IDbConnection Conexion() {
             return new SqlConnection(Conn);

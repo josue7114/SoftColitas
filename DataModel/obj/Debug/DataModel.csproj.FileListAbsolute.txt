@@ -96,3 +96,13 @@ C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\obj\Debug\DataModel.cspro
 C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\obj\Debug\DataModel.csproj.CopyComplete
 C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\obj\Debug\DataModel.dll
 C:\Users\josue\Desktop\Proyectos\SoftColitas\DataModel\obj\Debug\DataModel.pdb
+C:\Users\josep\Source\Repos\SoftColitas\DataModel\bin\Debug\DataModel.dll.config
+C:\Users\josep\Source\Repos\SoftColitas\DataModel\bin\Debug\DataModel.dll
+C:\Users\josep\Source\Repos\SoftColitas\DataModel\bin\Debug\DataModel.pdb
+C:\Users\josep\Source\Repos\SoftColitas\DataModel\bin\Debug\EntityFramework.dll
+C:\Users\josep\Source\Repos\SoftColitas\DataModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\josep\Source\Repos\SoftColitas\DataModel\bin\Debug\EntityFramework.xml
+C:\Users\josep\Source\Repos\SoftColitas\DataModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\josep\Source\Repos\SoftColitas\DataModel\obj\Debug\DataModel.csproj.CopyComplete
+C:\Users\josep\Source\Repos\SoftColitas\DataModel\obj\Debug\DataModel.dll
+C:\Users\josep\Source\Repos\SoftColitas\DataModel\obj\Debug\DataModel.pdb

@@ -50,6 +50,7 @@
     <Compile Include="DLReporte.cs" />
     <Compile Include="DLRescate.cs" />
     <Compile Include="DLUsuario.cs" />
+    <Compile Include="DLVerifyComponents.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

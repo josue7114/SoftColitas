@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Fas1AHPvDSUfEIYSzv4eJ7w+0MiIYuHWV6CLjiB/Jak=</dsig:DigestValue>
+        <dsig:DigestValue>8mhK9EXAH//k7F98Fn9yvhLmNlTD6p8E7p7sIbXKQuA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,19 +61,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>6JLguSUeJg/jAp7YYfIWQq949s8ftkixKep+Xr4yjE8=</dsig:DigestValue>
+        <dsig:DigestValue>ZI6CHqpeqE+tMgfNgANh/ad3z6i6aFT7R76tCAGtIVo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataLogic.dll" size="8192">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataLogic.dll" size="8704">
       <assemblyIdentity name="DataLogic" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>px/4rv/4Waq7h5VhrVUiRYbbvjjWZy4Whd2kw+8k2iY=</dsig:DigestValue>
+        <dsig:DigestValue>DLT21ojLd3TALqsAVOBljFBp4yGSwAFM5h1i6jJGZa4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -85,19 +85,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>LhDff7H0yGEFu3hetvtud7iFnvtINZfkDxr/Af3UIyg=</dsig:DigestValue>
+        <dsig:DigestValue>sbcrj1ZAQ2/GLnXCxuzFIBSEYoObHentVlrgED9AkY4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataView.exe" size="2312672">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataView.exe" size="2313184">
       <assemblyIdentity name="DataView" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>vY8GKAkghXFHMa5CSBsp20WieF5vMfwwyA0AZNDtKWU=</dsig:DigestValue>
+        <dsig:DigestValue>l0/tKB2YWKCynVCAuAYMyKGKqWCgXa+kJVGizcBB4JM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -133,17 +133,17 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Ik7Ph7srZO5MMelmEYW0rdHqv1HfnafXbn/2z7NukNI=</dsig:DigestValue>
+        <dsig:DigestValue>87QIKDczONpufYXN1V7Y6GzNRJI8KU1wwBWIZCsZ5qs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="DataView.exe.config" size="1742">
+  <file name="DataView.exe.config" size="1713">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>4haAtQy5PBrUjPnZv5M4p/jQY6IPqvcITMM39Elx4Vk=</dsig:DigestValue>
+      <dsig:DigestValue>6WAdx4NoMOhQ1y2Vc2jrDzAthljvzMX7iM/X7s6nv2c=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

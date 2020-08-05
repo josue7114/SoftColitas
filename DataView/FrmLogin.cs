@@ -99,9 +99,9 @@ namespace DataView
                 }
 
             }
-            catch
+            catch(Exception ex)
             {
-                MessageBox.Show("Contacte con el desarrollador para verificar el problema", "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Contacte con el desarrollador para verificar el problema"+ex, "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -11,6 +11,7 @@ namespace DataView
     {
         Usuario _usuario = new Usuario();
         DLUsuario _dlu = new DLUsuario();
+        DLVerifyComponents _dlv=new DLVerifyComponents();
         public FrmUsuarios()
         {
             InitializeComponent();
@@ -51,6 +52,10 @@ namespace DataView
                             MessageBox.Show("Error al crear registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         Limpiar();
+                        errorProvider.Clear();
+                    }
+                    else
+                    {
                         errorProvider.Clear();
                     }
                 }
@@ -159,17 +164,17 @@ namespace DataView
                 ok = false;
                 errorProvider.SetError(txtContra, "Debe ingresar una contraseña");
             }
-            if (this.txtCorreo.Text.Trim() == "")
+            if (!_dlv.email_bien_escrito(this.txtCorreo.Text.Trim()))
             {
                 ok = false;
-                errorProvider.SetError(txtCorreo, "Debe ingresar un correo");
+                errorProvider.SetError(txtCorreo, "Debe ingresar un correo valido");
             }
             if (this.txtNombre.Text.Trim() == "")
             {
                 ok = false;
                 errorProvider.SetError(txtNombre, "Debe ingresar un nombre");
             }
-            if(this.txtNombreUsuario.Text.Trim() == "")
+            if (this.txtNombreUsuario.Text.Trim() == "")
             {
                 ok = false;
                 errorProvider.SetError(txtNombreUsuario, "Debe ingresar un nombre de usuario");
