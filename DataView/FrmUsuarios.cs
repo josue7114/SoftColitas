@@ -11,7 +11,7 @@ namespace DataView
     {
         Usuario _usuario = new Usuario();
         DLUsuario _dlu = new DLUsuario();
-        DLVerifyComponents _dlv=new DLVerifyComponents();
+        DLVerifyComponents _dlverifcacion=new DLVerifyComponents();
         public FrmUsuarios()
         {
             InitializeComponent();
@@ -54,10 +54,10 @@ namespace DataView
                         Limpiar();
                         errorProvider.Clear();
                     }
-                    else
-                    {
-                        errorProvider.Clear();
-                    }
+                    //else
+                    //{
+                    //    errorProvider.Clear();
+                    //}
                 }
             }
             catch
@@ -159,12 +159,12 @@ namespace DataView
                 ok = false;
                 errorProvider.SetError(txtCedula, "Debe ingresar una cédula");
             }
-            if (this.txtContra.Text.Trim() == "")
+            if (!_dlverifcacion.caracteres_minimos( this.txtContra.Text.Trim()))
             {
                 ok = false;
-                errorProvider.SetError(txtContra, "Debe ingresar una contraseña");
+                errorProvider.SetError(txtContra, "Debe ingresar una contraseña, debe tener un mínimo de 6 caracteres");
             }
-            if (!_dlv.email_bien_escrito(this.txtCorreo.Text.Trim()))
+            if (!_dlverifcacion.email_bien_escrito(this.txtCorreo.Text.Trim()))
             {
                 ok = false;
                 errorProvider.SetError(txtCorreo, "Debe ingresar un correo valido");
@@ -174,10 +174,10 @@ namespace DataView
                 ok = false;
                 errorProvider.SetError(txtNombre, "Debe ingresar un nombre");
             }
-            if (this.txtNombreUsuario.Text.Trim() == "")
+            if (!_dlverifcacion.caracteres_minimos(txtNombreUsuario.Text.Trim()))
             {
                 ok = false;
-                errorProvider.SetError(txtNombreUsuario, "Debe ingresar un nombre de usuario");
+                errorProvider.SetError(txtNombreUsuario, "Debe ingresar un nombre de usuario, debe tener un mínimo de 6 caracteres");
             }
             return ok;
         }

@@ -12,7 +12,7 @@ namespace DataLogic
     public class DLVerifyComponents
     {
         
-        public Boolean email_bien_escrito(String email)
+        public Boolean email_bien_escrito(string email)
         {
             String expresion;
             expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
@@ -31,6 +31,15 @@ namespace DataLogic
             {
                 return false;
             }
+        }
+        public Boolean caracteres_minimos(string componente)
+        {
+            int minimo = 6;
+            if(componente.Length<=minimo)
+            {
+                return false;
+            }
+            return true;
         }
        
     }
