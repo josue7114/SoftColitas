@@ -6,27 +6,27 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.16133cm</Width>
+              <Width>2.29892cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.21425cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.9605cm</Width>
+              <Width>5.17758cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.14017cm</Width>
+              <Width>2.27775cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.24374cm</Width>
+              <Width>2.38133cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.63758cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>1.25617cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -211,7 +211,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>1.25617cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -419,9 +419,9 @@
         </TablixRowHierarchy>
         <DataSetName>DataSetAnimales</DataSetName>
         <Top>0.5842cm</Top>
-        <Left>0.35137cm</Left>
-        <Height>1.2cm</Height>
-        <Width>15.50574cm</Width>
+        <Left>0.97039cm</Left>
+        <Height>2.51233cm</Height>
+        <Width>16.98741cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -432,7 +432,7 @@
     <Height>3.63333in</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>7.525in</Width>
   <Page>
     <PageHeader>
       <Height>2.54cm</Height>
@@ -460,7 +460,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>0.53058cm</Top>
-          <Left>4.59411cm</Left>
+          <Left>6.01228cm</Left>
           <Height>1.5cm</Height>
           <Width>10.4375cm</Width>
           <Style>
