@@ -134,6 +134,12 @@
     <Compile Include="FrmExpedienteMedico.Designer.cs">
       <DependentUpon>FrmExpedienteMedico.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmImpresionReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImpresionReportes.Designer.cs">
+      <DependentUpon>FrmImpresionReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInformacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     <EmbeddedResource Include="FrmExpedienteMedico.resx">
       <DependentUpon>FrmExpedienteMedico.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmImpresionReportes.resx">
+      <DependentUpon>FrmImpresionReportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmInformacion.resx">
       <DependentUpon>FrmInformacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +243,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\ReportAdoptantes.rdlc" />
+    <EmbeddedResource Include="Reportes\ReportAnimales.rdlc" />
+    <EmbeddedResource Include="Reportes\ReportUsuarios.rdlc" />
     <None Include="DataView_TemporaryKey.pfx" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
