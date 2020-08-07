@@ -298,17 +298,17 @@ namespace DataView
 
         private bool VerificarCampos() {
             bool ok = true;
-            if (this.txtCodigo.Text.Trim() == "" || this.txtCodigo.Text.Trim() == "2020-")
+            if (this.txtCodigo.Text.Trim() == "" || this.txtCodigo.Text.Trim() == "2020-" || !this.txtCodigo.Text.Trim().Contains("2020-"))
             {
                 ok = false;
-                errorProvider.SetError(txtCodigo, "Debe ingresar un código");
+                errorProvider.SetError(txtCodigo, "Debe ingresar un código valido");
             }
             if (this.txtFecha.Text.Trim() == "")
             {
                 ok = false;
                 errorProvider.SetError(txtFecha, "Debe ingresar una fecha");
             }
-            if (this.cboxEspecie.SelectedIndex == -1)
+            if (this.cboxEspecie.SelectedIndex == -1 || this.cboxEspecie.SelectedIndex == 0)
             {
                 ok = false;
                 errorProvider.SetError(cboxEspecie, "Debe seleccionar una especie");
@@ -323,7 +323,7 @@ namespace DataView
                 ok = false;
                 errorProvider.SetError(txtPeso, "Debe ingresar un peso");
             }
-            if (this.CBXEdad.SelectedIndex == -1)
+            if (this.CBXEdad.SelectedIndex == -1 || this.CBXEdad.SelectedIndex == 0)
             {
                 ok = false;
                 errorProvider.SetError(CBXEdad, "Debe seleccionar una edad");
@@ -340,6 +340,8 @@ namespace DataView
             }
             return ok;
         }
+
+      
     }
 }
 
