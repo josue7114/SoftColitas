@@ -250,6 +250,9 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\DataSources\DataModel.Adoptante.datasource" />
+    <None Include="Properties\DataSources\DataModel.Animal.datasource" />
+    <None Include="Properties\DataSources\DataModel.Usuario.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
