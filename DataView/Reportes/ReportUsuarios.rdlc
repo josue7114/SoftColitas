@@ -6,7 +6,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.36785cm</Width>
+              <Width>2.98685cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.6905cm</Width>
@@ -15,7 +15,7 @@
               <Width>7.47417cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.44733cm</Width>
+              <Width>5.59033cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -149,21 +149,21 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox3">
+                    <Textbox Name="Username">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!Username.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox3</rd:DefaultName>
+                      <rd:DefaultName>Username</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -179,21 +179,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox5">
+                    <Textbox Name="Cedula">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!Cedula.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox5</rd:DefaultName>
+                      <rd:DefaultName>Cedula</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -209,21 +209,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox7">
+                    <Textbox Name="NombreCompleto">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!NombreCompleto.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox7</rd:DefaultName>
+                      <rd:DefaultName>NombreCompleto</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -239,21 +239,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox9">
+                    <Textbox Name="Correo">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!Correo.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox9</rd:DefaultName>
+                      <rd:DefaultName>Correo</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -289,10 +289,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
+        <DataSetName>DataSetUsuarios</DataSetName>
         <Top>0.75353cm</Top>
-        <Left>0.69003cm</Left>
+        <Left>1.21922cm</Left>
         <Height>1.2cm</Height>
-        <Width>17.97985cm</Width>
+        <Width>18.74185cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -300,10 +301,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>3.56667in</Height>
+    <Height>29.7cm</Height>
     <Style />
   </Body>
-  <Width>7.775in</Width>
+  <Width>21cm</Width>
   <Page>
     <PageHeader>
       <Height>2.54cm</Height>
@@ -331,7 +332,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>0.53058cm</Top>
-          <Left>6.2192cm</Left>
+          <Left>6.74839cm</Left>
           <Height>1.5cm</Height>
           <Width>10.4375cm</Width>
           <Style>
@@ -349,7 +350,7 @@
           <Value>LOGOColitasEsparza</Value>
           <Sizing>FitProportional</Sizing>
           <Top>0.25541cm</Top>
-          <Left>1.11856cm</Left>
+          <Left>1.64774cm</Left>
           <Height>2.02917cm</Height>
           <Width>2.93933cm</Width>
           <ZIndex>1</ZIndex>

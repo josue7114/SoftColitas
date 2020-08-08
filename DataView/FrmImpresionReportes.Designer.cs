@@ -28,26 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.UsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.UsuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer
             // 
-            this.reportViewer.Location = new System.Drawing.Point(12, 12);
+            this.reportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSetUsuarios";
+            reportDataSource1.Value = this.UsuarioBindingSource;
+            this.reportViewer.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer.LocalReport.ReportEmbeddedResource = "DataView.Reportes.ReportUsuarios.rdlc";
+            this.reportViewer.Location = new System.Drawing.Point(0, 0);
             this.reportViewer.Name = "reportViewer";
             this.reportViewer.ServerReport.BearerToken = null;
-            this.reportViewer.Size = new System.Drawing.Size(776, 426);
+            this.reportViewer.Size = new System.Drawing.Size(1129, 450);
             this.reportViewer.TabIndex = 0;
+            // 
+            // UsuarioBindingSource
+            // 
+            this.UsuarioBindingSource.DataSource = typeof(DataModel.Usuario);
             // 
             // FrmImpresionReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1129, 450);
             this.Controls.Add(this.reportViewer);
             this.Name = "FrmImpresionReportes";
             this.Text = "Reportes";
             this.Load += new System.EventHandler(this.FrmImpresionReportes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.UsuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -55,5 +69,6 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer;
+        private System.Windows.Forms.BindingSource UsuarioBindingSource;
     }
 }

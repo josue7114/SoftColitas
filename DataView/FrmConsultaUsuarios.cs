@@ -1,5 +1,7 @@
 ﻿using DataLogic;
+using DataModel;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -12,6 +14,7 @@ namespace DataView
     public partial class FrmConsultaUsuarios : Form
     {
         DLUsuario _dlu = new DLUsuario();
+        List<Usuario> _listU = new List<Usuario>();
         public FrmConsultaUsuarios()
         {
             InitializeComponent();
@@ -63,44 +66,26 @@ namespace DataView
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            PrintDocument doc = new PrintDocument();
-            doc.DefaultPageSettings.Landscape = false;
-            doc.PrinterSettings.PrinterName = "Microsoft Print to PDF";
-
-            PrintPreviewDialog ppd = new PrintPreviewDialog { Document = doc };
-            ((Form)ppd).WindowState = FormWindowState.Maximized;
-
-            doc.PrintPage += delegate (object ev, PrintPageEventArgs ep)
+            try
             {
-                const int DGV_ALTO = 35;
-                int left = ep.MarginBounds.Left, top = ep.MarginBounds.Top, right = ep.MarginBounds.Right;
-
-                foreach (DataGridViewColumn col in GVUsuarios.Columns)
+                for (int i = 0; i < GVUsuarios.Rows.Count-1; i++)
                 {
-                    ep.Graphics.DrawString(col.HeaderText, new Font("Segoe UI", 16, FontStyle.Bold), Brushes.Black, left, top);
-                    left += col.Width;
-
-                    if (col.Index < GVUsuarios.ColumnCount - 1)
-                        ep.Graphics.DrawLine(Pens.Gray, left - 5, top, left - 5, top + 43 + (GVUsuarios.RowCount - 1) * DGV_ALTO);
+                    Usuario _user = new Usuario();
+                    _user.IDUsuario = Convert.ToInt32(GVUsuarios.Rows[i].Cells[0].Value.ToString());
+                    _user.NombreCompleto = GVUsuarios.Rows[i].Cells[1].Value.ToString();
+                    _user.Username = GVUsuarios.Rows[i].Cells[2].Value.ToString();
+                    _user.Correo = GVUsuarios.Rows[i].Cells[3].Value.ToString();
+                    _user.Cedula = GVUsuarios.Rows[i].Cells[4].Value.ToString();
+                    _listU.Add(_user);
                 }
-                left = ep.MarginBounds.Left;
-                ep.Graphics.FillRectangle(Brushes.Black, left, top + 40, ep.MarginBounds.Right - left, 3);
-                top += 43;
+                new FrmImpresionReportes(_listU).Show();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
 
-                foreach (DataGridViewRow row in GVUsuarios.Rows)
-                {
-                    if (row.Index == GVUsuarios.RowCount - 1) break;
-                    left = ep.MarginBounds.Left;
-                    foreach (DataGridViewCell cell in row.Cells)
-                    {
-                        ep.Graphics.DrawString(Convert.ToString(cell.Value), new Font("Segoe UI", 13), Brushes.Black, left, top + 4);
-                        left += cell.OwningColumn.Width;
-                    }
-                    top += DGV_ALTO;
-                    ep.Graphics.DrawLine(Pens.Gray, ep.MarginBounds.Left, top, ep.MarginBounds.Right, top);
-                }
-            };
-            ppd.ShowDialog();
+            
         }
     }
 }

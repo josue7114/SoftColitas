@@ -9,10 +9,10 @@
               <Width>2.29892cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.21425cm</Width>
+              <Width>3.59008cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.17758cm</Width>
+              <Width>6.31465cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.27775cm</Width>
@@ -419,9 +419,9 @@
         </TablixRowHierarchy>
         <DataSetName>DataSetAnimales</DataSetName>
         <Top>0.5842cm</Top>
-        <Left>0.97039cm</Left>
+        <Left>1.30906cm</Left>
         <Height>2.51233cm</Height>
-        <Width>16.98741cm</Width>
+        <Width>19.50031cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -429,10 +429,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>3.63333in</Height>
+    <Height>29.7cm</Height>
     <Style />
   </Body>
-  <Width>7.525in</Width>
+  <Width>21.52903cm</Width>
   <Page>
     <PageHeader>
       <Height>2.54cm</Height>
@@ -460,7 +460,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>0.53058cm</Top>
-          <Left>6.01228cm</Left>
+          <Left>7.07811cm</Left>
           <Height>1.5cm</Height>
           <Width>10.4375cm</Width>
           <Style>
@@ -478,7 +478,7 @@
           <Value>LOGOColitasEsparza</Value>
           <Sizing>FitProportional</Sizing>
           <Top>0.25541cm</Top>
-          <Left>1.47839cm</Left>
+          <Left>2.54423cm</Left>
           <Height>2.02917cm</Height>
           <Width>2.93933cm</Width>
           <ZIndex>1</ZIndex>

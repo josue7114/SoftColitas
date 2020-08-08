@@ -6,19 +6,19 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.64817cm</Width>
+              <Width>2.74977cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.04cm</Width>
+              <Width>5.1416cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>6.28883cm</Width>
+              <Width>6.39043cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.6016cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.35183cm</Width>
+              <Width>2.45343cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -354,9 +354,9 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <Top>0.9765cm</Top>
-        <Left>0.70698cm</Left>
-        <Height>1.24233cm</Height>
-        <Width>18.82883cm</Width>
+        <Left>0.79164cm</Left>
+        <Height>1.24234cm</Height>
+        <Width>19.33683cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -364,10 +364,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>3.325in</Height>
+    <Height>29.7cm</Height>
     <Style />
   </Body>
-  <Width>7.98201in</Width>
+  <Width>21cm</Width>
   <Page>
     <PageHeader>
       <Height>2.35937cm</Height>
@@ -394,8 +394,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.52917cm</Top>
-          <Left>6.25964cm</Left>
+          <Top>0.49389cm</Top>
+          <Left>7.33914cm</Left>
           <Height>1.5cm</Height>
           <Width>10.4375cm</Width>
           <Style>
@@ -412,8 +412,8 @@
           <Source>Embedded</Source>
           <Value>LOGOColitasEsparza</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.3302cm</Top>
-          <Left>1.11099cm</Left>
+          <Top>0.29492cm</Top>
+          <Left>2.19049cm</Left>
           <Height>2.02917cm</Height>
           <Width>2.93933cm</Width>
           <ZIndex>1</ZIndex>
