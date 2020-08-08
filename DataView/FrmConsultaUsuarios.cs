@@ -68,7 +68,7 @@ namespace DataView
         {
             try
             {
-                for (int i = 0; i < GVUsuarios.Rows.Count-1; i++)
+                for (int i = 0; i < GVUsuarios.Rows.Count; i++)
                 {
                     Usuario _user = new Usuario();
                     _user.IDUsuario = Convert.ToInt32(GVUsuarios.Rows[i].Cells[0].Value.ToString());
@@ -78,14 +78,12 @@ namespace DataView
                     _user.Cedula = GVUsuarios.Rows[i].Cells[4].Value.ToString();
                     _listU.Add(_user);
                 }
-                new FrmImpresionReportes(_listU).Show();
+                new FrmReporteUsuarios("DataSetUsuarios", _listU.Cast<Object>().ToList()).Show();
             }
             catch (Exception)
             {
                 throw;
-            }
-
-            
+            }    
         }
     }
 }

@@ -176,6 +176,12 @@
     <Compile Include="FrmReportes.Designer.cs">
       <DependentUpon>FrmReportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReporteUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteUsuarios.Designer.cs">
+      <DependentUpon>FrmReporteUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRescates.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +233,9 @@
     <EmbeddedResource Include="FrmReportes.resx">
       <DependentUpon>FrmReportes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteUsuarios.resx">
+      <DependentUpon>FrmReporteUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmRescates.resx">
       <DependentUpon>FrmRescates.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,7 +252,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Reportes\ReportAdoptantes.rdlc" />
     <EmbeddedResource Include="Reportes\ReportAnimales.rdlc" />
     <EmbeddedResource Include="Reportes\ReportUsuarios.rdlc" />
     <None Include="DataView_TemporaryKey.pfx" />

@@ -1,9 +1,12 @@
 ﻿using DataLogic;
+using DataModel;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace DataView
@@ -11,6 +14,7 @@ namespace DataView
     public partial class FrmReportes : Form
     {
         DLReporte _dlr = new DLReporte();
+        List<Animal> _listA = new List<Animal>();
         public FrmReportes()
         {
             InitializeComponent();
@@ -119,44 +123,30 @@ namespace DataView
 
         private void btnGenerarReporte_Click(object sender, EventArgs e)
         {
-            PrintDocument doc = new PrintDocument();
-            doc.DefaultPageSettings.Landscape = true;
-            doc.PrinterSettings.PrinterName = "Microsoft Print to PDF";
-
-            PrintPreviewDialog ppd = new PrintPreviewDialog { Document = doc };
-            ((Form)ppd).WindowState = FormWindowState.Maximized;
-
-            doc.PrintPage += delegate (object ev, PrintPageEventArgs ep)
+            try
             {
-                const int DGV_ALTO = 35;
-                int left = ep.MarginBounds.Left, top = ep.MarginBounds.Top;
-
-                foreach (DataGridViewColumn col in GVReportes.Columns)
+                for (int i = 0; i < GVReportes.Rows.Count; i++)
                 {
-                    ep.Graphics.DrawString(col.HeaderText, new Font("Segoe UI", 16, FontStyle.Bold), Brushes.Black, left, top);
-                    left += col.Width;
-
-                    if (col.Index < GVReportes.ColumnCount - 1)
-                        ep.Graphics.DrawLine(Pens.Gray, left - 5, top, left - 5, top + 43 + (GVReportes.RowCount - 1) * DGV_ALTO);
+                    Animal _animal = new Animal();
+                    _animal.CodigoAnimal= GVReportes.Rows[i].Cells[0].Value.ToString();
+                    _animal.Imagen= (byte []) GVReportes.Rows[i].Cells[1].Value;
+                    _animal.Tamano = GVReportes.Rows[i].Cells[2].Value.ToString();
+                    _animal.EdadAprox = GVReportes.Rows[i].Cells[3].Value.ToString();
+                    _animal.PesoAprox = GVReportes.Rows[i].Cells[4].Value.ToString();
+                    _animal.Color = GVReportes.Rows[i].Cells[5].Value.ToString();
+                    _animal.Estado = GVReportes.Rows[i].Cells[6].Value.ToString();
+                    _animal.Descripcion = GVReportes.Rows[i].Cells[7].Value.ToString();
+                    _animal.Especie = GVReportes.Rows[i].Cells[8].Value.ToString();
+                    _animal.FechaIngreso = Convert.ToDateTime(GVReportes.Rows[i].Cells[9].Value.ToString());
+                    _animal.IDUsuario = Convert.ToInt32(GVReportes.Rows[i].Cells[10].Value.ToString());
+                    _listA.Add(_animal);
                 }
-                left = ep.MarginBounds.Left;
-                ep.Graphics.FillRectangle(Brushes.Black, left, top + 40, ep.MarginBounds.Right - left, 3);
-                top += 43;
-
-                foreach (DataGridViewRow row in GVReportes.Rows)
-                {
-                    if (row.Index == GVReportes.RowCount - 1) break;
-                    left = ep.MarginBounds.Left;
-                    foreach (DataGridViewCell cell in row.Cells)
-                    {
-                        ep.Graphics.DrawString(Convert.ToString(cell.Value), new Font("Segoe UI", 13), Brushes.Black, left, top + 4);
-                        left += cell.OwningColumn.Width;
-                    }
-                    top += DGV_ALTO;
-                    ep.Graphics.DrawLine(Pens.Gray, ep.MarginBounds.Left, top, ep.MarginBounds.Right, top);
-                }
-            };
-            ppd.ShowDialog();
+                new FrmImpresionReportes("DataSetAnimales", _listA.Cast<Object>().ToList()).Show();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

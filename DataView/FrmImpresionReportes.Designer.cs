@@ -30,27 +30,28 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmImpresionReportes));
             this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.UsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.UsuarioBindingSource)).BeginInit();
+            this.AnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.AnimalBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer
             // 
             this.reportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSetUsuarios";
-            reportDataSource1.Value = this.UsuarioBindingSource;
+            reportDataSource1.Name = "DataSetAnimales";
+            reportDataSource1.Value = this.AnimalBindingSource;
             this.reportViewer.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer.LocalReport.ReportEmbeddedResource = "DataView.Reportes.ReportUsuarios.rdlc";
+            this.reportViewer.LocalReport.ReportEmbeddedResource = "DataView.Reportes.ReportAnimales.rdlc";
             this.reportViewer.Location = new System.Drawing.Point(0, 0);
             this.reportViewer.Name = "reportViewer";
             this.reportViewer.ServerReport.BearerToken = null;
             this.reportViewer.Size = new System.Drawing.Size(1129, 450);
             this.reportViewer.TabIndex = 0;
             // 
-            // UsuarioBindingSource
+            // AnimalBindingSource
             // 
-            this.UsuarioBindingSource.DataSource = typeof(DataModel.Usuario);
+            this.AnimalBindingSource.DataSource = typeof(DataModel.Animal);
             // 
             // FrmImpresionReportes
             // 
@@ -58,10 +59,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1129, 450);
             this.Controls.Add(this.reportViewer);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmImpresionReportes";
-            this.Text = "Reportes";
+            this.Text = "Reporte de animales";
             this.Load += new System.EventHandler(this.FrmImpresionReportes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.UsuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AnimalBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -69,6 +71,6 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer;
-        private System.Windows.Forms.BindingSource UsuarioBindingSource;
+        private System.Windows.Forms.BindingSource AnimalBindingSource;
     }
 }

@@ -14,11 +14,13 @@ namespace DataView
 {
     public partial class FrmImpresionReportes : Form
     {
-        List<Usuario> _list = new List<Usuario>();
-        public FrmImpresionReportes(List<Usuario> list)
+        List<Object> _list = new List<Object>();
+        String _type = "";
+        public FrmImpresionReportes(String type, List<Object> list)
         {
             InitializeComponent();
             _list = list;
+            _type = type;
         }
 
         private void FrmImpresionReportes_Load(object sender, EventArgs e)
@@ -29,7 +31,7 @@ namespace DataView
         private void CargarReporte()
         {
             reportViewer.LocalReport.DataSources.Clear();
-            reportViewer.LocalReport.DataSources.Add(new ReportDataSource("DataSetUsuarios", _list));
+            reportViewer.LocalReport.DataSources.Add(new ReportDataSource(_type, _list));
             this.reportViewer.RefreshReport();
         }
     }
