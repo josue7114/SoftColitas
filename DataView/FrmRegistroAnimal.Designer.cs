@@ -444,6 +444,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(146)))), ((int)(((byte)(208)))));
             this.ClientSize = new System.Drawing.Size(677, 880);
+            this.ControlBox = false;
             this.Controls.Add(this.gbEstado);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.txtRutaImagen);

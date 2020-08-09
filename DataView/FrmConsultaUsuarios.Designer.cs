@@ -80,6 +80,7 @@
             this.GVUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GVUsuarios.Location = new System.Drawing.Point(24, 236);
             this.GVUsuarios.Name = "GVUsuarios";
+            this.GVUsuarios.RowHeadersWidth = 51;
             this.GVUsuarios.RowTemplate.Height = 24;
             this.GVUsuarios.Size = new System.Drawing.Size(737, 206);
             this.GVUsuarios.TabIndex = 4;
@@ -137,6 +138,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(148)))), ((int)(((byte)(208)))));
             this.ClientSize = new System.Drawing.Size(800, 517);
+            this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtCedula);
             this.Controls.Add(this.btnImprimir);

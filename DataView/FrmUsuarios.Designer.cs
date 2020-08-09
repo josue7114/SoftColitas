@@ -123,7 +123,6 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(331, 39);
             this.txtNombre.TabIndex = 11;
-            
             // 
             // txtCedula
             // 
@@ -144,7 +143,6 @@
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(331, 39);
             this.txtNombreUsuario.TabIndex = 13;
-         
             // 
             // txtContra
             // 
@@ -259,6 +257,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(146)))), ((int)(((byte)(208)))));
             this.ClientSize = new System.Drawing.Size(822, 549);
+            this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.txtContra);

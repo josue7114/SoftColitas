@@ -50,46 +50,46 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Fax", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(260, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 32);
+            this.label1.Size = new System.Drawing.Size(176, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Donaciones";
             // 
             // lbMontoT
             // 
             this.lbMontoT.AutoSize = true;
-            this.lbMontoT.Font = new System.Drawing.Font("Lucida Fax", 10.8F, System.Drawing.FontStyle.Bold);
+            this.lbMontoT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMontoT.Location = new System.Drawing.Point(113, 246);
             this.lbMontoT.Name = "lbMontoT";
-            this.lbMontoT.Size = new System.Drawing.Size(130, 22);
+            this.lbMontoT.Size = new System.Drawing.Size(118, 24);
             this.lbMontoT.TabIndex = 1;
             this.lbMontoT.Text = "Monto total:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Fax", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(53, 157);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(197, 22);
+            this.label3.Size = new System.Drawing.Size(185, 24);
             this.label3.TabIndex = 2;
             this.label3.Text = "Codigo del animal:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lucida Fax", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(165, 204);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 22);
+            this.label4.Size = new System.Drawing.Size(74, 24);
             this.label4.TabIndex = 3;
             this.label4.Text = "Monto:";
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Font = new System.Drawing.Font("Lucida Fax", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.Image = global::DataView.Properties.Resources.registrar_32;
             this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistrar.Location = new System.Drawing.Point(64, 498);
@@ -115,7 +115,7 @@
             // 
             // btnRegresar
             // 
-            this.btnRegresar.Font = new System.Drawing.Font("Lucida Fax", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegresar.Image = global::DataView.Properties.Resources.paloma;
             this.btnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegresar.Location = new System.Drawing.Point(481, 498);
@@ -195,6 +195,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(146)))), ((int)(((byte)(208)))));
             this.ClientSize = new System.Drawing.Size(663, 577);
+            this.ControlBox = false;
             this.Controls.Add(this.txtMontoT);
             this.Controls.Add(this.nMonto);
             this.Controls.Add(this.pBoxFoto);

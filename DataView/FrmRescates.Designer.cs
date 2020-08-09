@@ -315,6 +315,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(146)))), ((int)(((byte)(208)))));
             this.ClientSize = new System.Drawing.Size(778, 667);
+            this.ControlBox = false;
             this.Controls.Add(this.cboxAnimales);
             this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.pictureBox1);

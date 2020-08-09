@@ -107,6 +107,7 @@
             this.GVReportes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GVReportes.Location = new System.Drawing.Point(40, 212);
             this.GVReportes.Name = "GVReportes";
+            this.GVReportes.RowHeadersWidth = 51;
             this.GVReportes.RowTemplate.Height = 24;
             this.GVReportes.Size = new System.Drawing.Size(719, 198);
             this.GVReportes.TabIndex = 5;
@@ -171,6 +172,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(146)))), ((int)(((byte)(208)))));
             this.ClientSize = new System.Drawing.Size(797, 493);
+            this.ControlBox = false;
             this.Controls.Add(this.cBoxTipoAnimal);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.pictureBox1);
