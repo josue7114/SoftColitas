@@ -115,9 +115,9 @@ namespace DataView
                 GVReportes.DataSource = _dlr.LlenarGridGeneral();
                 GVReportes.Refresh();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Error al cargar tabla de consulta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al cargar tabla de consulta "+ex , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -129,7 +129,7 @@ namespace DataView
                 {
                     Animal _animal = new Animal();
                     _animal.CodigoAnimal= GVReportes.Rows[i].Cells[0].Value.ToString();
-                    _animal.Imagen= (byte []) GVReportes.Rows[i].Cells[1].Value;
+                    _animal.Imagen= (byte[]) GVReportes.Rows[i].Cells[1].Value;
                     _animal.Tamano = GVReportes.Rows[i].Cells[2].Value.ToString();
                     _animal.EdadAprox = GVReportes.Rows[i].Cells[3].Value.ToString();
                     _animal.PesoAprox = GVReportes.Rows[i].Cells[4].Value.ToString();

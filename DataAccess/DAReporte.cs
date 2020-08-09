@@ -27,10 +27,11 @@ namespace DataAccess
                 animal.EdadAprox = _reader.GetString(2);
                 animal.PesoAprox = _reader.GetString(3);
                 animal.Color = _reader.GetString(4);
-                animal.Estado = _reader.GetString(5);
-                animal.Descripcion = _reader.GetString(6);
-                animal.Especie = _reader.GetString(7);
-                animal.FechaIngreso = Convert.ToDateTime(_reader.GetValue(8));
+                animal.Imagen = (byte[])_reader.GetValue(5);
+                animal.Estado = _reader.GetString(6);
+                animal.Descripcion = _reader.GetString(7);
+                animal.Especie = _reader.GetString(8);
+                animal.FechaIngreso = Convert.ToDateTime(_reader.GetValue(9));
                 _list.Add(animal);
             }
             _conn.Close();
@@ -53,10 +54,11 @@ namespace DataAccess
                 animal.EdadAprox = _reader.GetString(2);
                 animal.PesoAprox = _reader.GetString(3);
                 animal.Color = _reader.GetString(4);
-                animal.Estado = _reader.GetString(5);
-                animal.Descripcion = _reader.GetString(6);
-                animal.Especie = _reader.GetString(7);
-                animal.FechaIngreso = Convert.ToDateTime(_reader.GetValue(8));
+                animal.Imagen = (byte[])_reader.GetValue(5);
+                animal.Estado = _reader.GetString(6);
+                animal.Descripcion = _reader.GetString(7);
+                animal.Especie = _reader.GetString(8);
+                animal.FechaIngreso = Convert.ToDateTime(_reader.GetValue(9));
                 _list.Add(animal);
             }
             _conn.Close();
@@ -80,10 +82,11 @@ namespace DataAccess
                 animal.EdadAprox = _reader.GetString(2);
                 animal.PesoAprox = _reader.GetString(3);
                 animal.Color = _reader.GetString(4);
-                animal.Estado = _reader.GetString(5);
-                animal.Descripcion = _reader.GetString(6);
-                animal.Especie = _reader.GetString(7);
-                animal.FechaIngreso = Convert.ToDateTime(_reader.GetValue(8));
+                animal.Imagen = (byte[])_reader.GetValue(5);
+                animal.Estado = _reader.GetString(6);
+                animal.Descripcion = _reader.GetString(7);
+                animal.Especie = _reader.GetString(8);
+                animal.FechaIngreso = Convert.ToDateTime(_reader.GetValue(9));
                 _list.Add(animal);
             }
             _conn.Close();
@@ -106,10 +109,11 @@ namespace DataAccess
                 animal.EdadAprox = _reader.GetString(2);
                 animal.PesoAprox = _reader.GetString(3);
                 animal.Color = _reader.GetString(4);
-                animal.Estado = _reader.GetString(5);
-                animal.Descripcion = _reader.GetString(6);
-                animal.Especie = _reader.GetString(7);
-                animal.FechaIngreso = Convert.ToDateTime(_reader.GetValue(8));
+                animal.Imagen = (byte[])_reader.GetValue(5);
+                animal.Estado = _reader.GetString(6);
+                animal.Descripcion = _reader.GetString(7);
+                animal.Especie = _reader.GetString(8);
+                animal.FechaIngreso = Convert.ToDateTime(_reader.GetValue(9));
                 _list.Add(animal);
             }
             _conn.Close();
