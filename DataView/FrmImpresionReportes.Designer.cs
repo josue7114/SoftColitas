@@ -31,10 +31,14 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmImpresionReportes));
-            this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.AnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.AnimalBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // AnimalBindingSource
+            // 
+            this.AnimalBindingSource.DataSource = typeof(DataModel.Animal);
             // 
             // reportViewer
             // 
@@ -48,10 +52,6 @@
             this.reportViewer.ServerReport.BearerToken = null;
             this.reportViewer.Size = new System.Drawing.Size(1129, 450);
             this.reportViewer.TabIndex = 0;
-            // 
-            // AnimalBindingSource
-            // 
-            this.AnimalBindingSource.DataSource = typeof(DataModel.Animal);
             // 
             // FrmImpresionReportes
             // 
